@@ -1,25 +1,33 @@
-<!-- 声明为html5文档 -->
-<DOCTYPE html>
-<!-- 从html开始完整的html页面 -->
+<!DOCTYPE html>
 <html>
-<!-- head包含所有头部标签元素 -->
 <head>
-    <!-- 描述了文档编码为utf-8 -->
-    <meta charset="utf-8" />
-    <!-- 文档标题 -->
-    <title>zydsfw网址导航</title>
+    <meta charset="utf-8">
+    <title></title>
 </head>
-
-<!-- body内是页面内容 -->
 <body>
-<!-- h1是大标题 -->
-<h1>常用网址</h1>
-<!-- 这是水平线 -->
-<hr />
-<!-- a是超链接，href属性指明超链接的目的地址 -->
-<a href="http://www.baidu.com" target="_blank"><img src="s1.png" alt=""/></a><br/>
-
-<a href="http://www.google.com" target="_blank"><img src="s2.png" alt=""/></a><br/>
-<a href="http://cn.bing.com" target="_blank"><img src="s3.png" alt=""/></a>
+	<div>
+		<input type="file" id="files" style="display: none" onchange="fileImport();">
+		<input type="button" id="fileImport" value="导入">
+	</div>
+	<script>
+		//点击导入按钮,使files触发点击事件,然后完成读取文件的操作
+		$("#fileImport").click(function () {
+			$("#files").click();
+		})
+		function fileImport() {
+			//获取读取我文件的File对象
+			var selectedFile = document.getElementById('files').files[0];
+			var name = selectedFile.name;//读取选中文件的文件名
+			var size = selectedFile.size;//读取选中文件的大小
+			console.log("文件名:"+name+"大小:"+size);
+				
+			var reader = new FileReader();//这是核心,读取操作就是由它完成.
+			//reader.readAsText(selectedFile);//读取文件的内容,也可以读取文件的URL
+			reader.onload = function () {
+				//当读取完成后回调这个函数,然后此时文件的内容存储到了result中,直接操作即可
+				console.log(this.result);
+			}
+	    }
+	</script>
 </body>
 </html>
