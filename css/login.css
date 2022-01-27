@@ -1,0 +1,48 @@
+.login_box {
+    width: 330px;
+    height: 230px;
+    border:1px solid #000;
+    margin: 0 auto;
+    margin-top: 15%;
+    text-align: center;/* 内容居中*/
+    background: #00000070;
+}
+
+.login_box h1 {
+    color:#fff;
+}
+
+/* #login_box .form {
+    margin-top: 15px;
+} */
+
+.login_box .form .item{
+    margin-top:15px;
+}
+.login_box .form .item i{
+    color:#fff;
+}
+
+.login_box .form .item input {
+    border: 0;
+    width: 150px;
+    /* 字体大小 */
+    font-size: 20px;
+    /* 下边框 */
+    border-bottom: 2px solid #fff;
+    /* 内边距 */
+    padding: 5px 10px;
+    background: #ffffff00;
+    /* 字体颜色 */
+    color:#fff;
+}
+
+.login_box button{
+    margin-top: 10px;
+    width: 130px;
+    border: 0;
+    font-size: 700;
+    /* background-image: linear-gradient(to right, #ad3125 0%, #578bc3 100%); */
+    /* 设置登陆按钮为圆形 */
+    border-radius: 15px;
+}

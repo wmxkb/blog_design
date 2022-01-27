@@ -1,4 +1,4 @@
-.bgimg{
+/* .bgimg{
     position:fixed;
     top: 0;
     left: 0;
@@ -13,6 +13,14 @@
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-position: center 0;
+} */
+body {
+    background: url(../images/background.jpg);
+    /* 背景不重复 */
+    background-repeat: no-repeat;
+    /* 让背景充满整个屏幕 */
+    background-size: 100% auto;
+
 }
 
 .top{
@@ -122,7 +130,7 @@
 
  }
 
- .login li a:hover{
+.login li a:hover{
     /* 鼠标选中时背景变为黑色 */
     background-color: rgb(138, 84, 84);
 }
