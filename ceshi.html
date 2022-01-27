@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+	<link rel = "stylesheet" href="css/main.css" />
+</head>
+<body>
+	<!-- 背景图片 -->
+	<div class="bgimg"></div>
+	<div class="top">
+		<center> 
+		 <ul>
+		 <li><a href="#">一级菜单</a></li>
+		 <li><a href="#">一级菜单</a></li>
+		 <li><a href="#">一级菜单</a></li>
+		 <li><a href="#"><b>一级菜单</b></a></li>
+		 <li><a href="#">一级菜单</a></li>
+		 <li>
+			 <a href="#">一级菜单</a>
+			 <ul>
+				 <li><a href="#">二级菜单</a></li>
+				 <li><a href="#">二级菜单</a></li>
+			 </ul>
+		 </li>        
+		   </ul>
+		 </center>
+	</div>
+	<!-- <img src="" /> -->
+	<!-- <div>
+		<button type="button">Click Me!</button>
+	</div> -->
+	
+
+	<script>
+		function append(){
+			var sentence = document.getElementById("new").value;
+			var node = document.createTextNode(sentence);
+			document.getElementById("para").appendChild(node);
+			document.getElementById("new").value = "特隔阂";
+		}
+	</script>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<div>
+		<p id="para">11111111111111111111111111</p>
+
+	</div>
+		
+	<form>
+		<input type="text" id="new">
+		<button onclick="append()">
+			append
+		<botton>
+	</form>
+</body>
+</html>
